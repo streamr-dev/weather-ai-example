@@ -20,7 +20,9 @@ export const computeAverages = (data: WeatherDataPoint[]): WeatherAverages => {
 };
 
 // Using chat-gpt to generate a weather report
-export const generateWeatherReport = async (data: WeatherAverages) => {
+export const generateAndPublishWeatherReport = async (
+  data: WeatherAverages
+) => {
   const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
   });

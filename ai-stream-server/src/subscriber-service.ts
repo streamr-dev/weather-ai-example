@@ -1,7 +1,7 @@
 import StreamrClient from 'streamr-client';
 import { WEATHER_STREAM_ID } from './config';
 import { WeatherDataPoint } from './interfaces';
-import { computeAverages, generateWeatherReport } from './helper';
+import { computeAverages, generateAndPublishWeatherReport } from './helper';
 
 /* 
 Example Weather Data Point:
@@ -41,7 +41,8 @@ export const startSubscriberService = () => {
       // Calculating the averages for ai model
       const weatherAverages = computeAverages(dataBuffer);
 
-      generateWeatherReport(weatherAverages);
+      // calling openAi and publishing report to ai stream
+      generateAndPublishWeatherReport(weatherAverages);
 
       // Clear the buffer for the next set of 60 data points
       dataBuffer = [];
