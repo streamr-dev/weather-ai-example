@@ -7,7 +7,7 @@
 This service consists of two servers designed to publish data to distinct data streams:
 
 1. **Weather Stream**: Contains individual weather data points.
-2. **AI Stream**: Houses weather reports, generated through the OpenAI API using a Learning Language Model (LLM). These reports are based on averaged values derived from the data points of the weather stream.
+2. **AI Stream**: Houses weather reports, generated through the OpenAI API using a Large Language Model (LLM). These reports are based on averaged values derived from the data points of the weather stream.
 
 ## **Server Responsibilities**
 
