@@ -90,6 +90,8 @@ To configure your stream:
 3. You'll need to establish two streams:
    - One for weather mock data.
    - Another for the weather report data.
+  
+4. Update the stream IDs in both config.ts files.
 
 ## **4. Starting the Servers**
 
