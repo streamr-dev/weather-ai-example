@@ -45,6 +45,15 @@ This service consists of two servers designed to publish data to distinct data s
 }
 ```
 
+```json
+{
+   "Weather Report:
+In the past hour, the temperature averaged around a comfy 24.99°C, making it a pleasant time to step outside. The humidity clocked in at approximately 64.88%, so it's not too muggy out there. The air quality index (AQI) averaged at 68.18, indicating decent air quality. And well, the noise level averaged around 59.93, reminding us that silence is golden.
+
+Remember, folks, weather reports are like jokes - they can always use a little sunshine!"
+}
+```
+
 ## **2. Installation**
 
 ### **AI Stream Server**:
