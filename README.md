@@ -1,6 +1,51 @@
 # **AI & Weather Stream Servers Installation & Configuration Guide**
 
-## **1. Installation**
+# **1. Context**
+
+## **Overview**
+
+This service consists of two servers designed to publish data to distinct data streams/topics:
+
+1. **Weather Stream**: Contains individual weather data points.
+2. **AI Stream**: Houses weather reports, generated through the OpenAI API using a Learning Language Model (LLM). These reports are based on averaged values derived from the data points of the weather stream.
+
+## **Server Responsibilities**
+
+- **weather-stream-server**:
+
+  - Publishes mock weather data at one-second intervals.
+
+- **ai-stream-server**:
+  - Aggregates the last 60 weather data points.
+  - Calculates averages based on these data points.
+  - Sends a request to OpenAI to obtain a corresponding weather report.
+  - Publishes the generated weather report to the AI stream.
+
+## **Data Structure Examples**
+
+### **Weather Data Point**:
+
+```json
+{
+  "temperature": 27.56,
+  "humidity": 46.39,
+  "airQualityIndex": 16,
+  "noiseLevel": 66.45
+}
+```
+
+### **Averaged Weather Data Point**:
+
+```json
+{
+  "avgTemperature": 26.939166666666658,
+  "avgHumidity": 66.64150000000001,
+  "avgAQI": 68.88333333333334,
+  "avgNoise": 59.78016666666665
+}
+```
+
+## **2. Installation**
 
 ### **AI Stream Server**:
 
